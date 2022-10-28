@@ -1,7 +1,7 @@
 {
   "name": "vslabx-extension",
   "displayName": "VSLABX (MPLABX Extension)",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "ya-technologies",
   "description": "Build, Program, and Debug MPLABX Projects.",
   "author": {
@@ -54,7 +54,7 @@
     "await-notify": "1.0.1",
     "base64-js": "^1.5.1",
     "child_process": "^1.0.2",
-    "esbuild": "^0.14.38",
+    "esbuild": "^0.14.54",
     "eslint": "^8.9.0",
     "events": "^3.3.0",
     "glob": "^7.2.0",
@@ -252,6 +252,7 @@
     ]
   },
   "dependencies": {
-    "xml2js": "^0.4.23"
+    "xml2js": "^0.4.23",
+    "yarn": "^1.22.19"
   }
 }

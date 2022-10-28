@@ -83,7 +83,9 @@ export class MPLABXAssistant {
 
 			let debugString = definition?.debug ?? false ? ' TYPE_IMAGE=DEBUG_RUN' : '';
 
-			let command: string = `${this.paths.mplabxMakePath} CONF=\"${config}\"${debugString}`;
+			let extraMakeArgs = definition?.extraMakeArgs ?? '';
+
+			let command: string = `${this.paths.mplabxMakePath} CONF=\"${config}\"${debugString} ${extraMakeArgs}`;
 
 			if (platformDetect.windows) {
 				command = `"${command}"`;
@@ -109,4 +111,5 @@ export interface MpMakeTaskDefinition extends vscode.TaskDefinition {
 	projectFolder: string;
 	configuration?: string;
 	debug?: boolean;
+	extraMakeArgs?: string;
 }
